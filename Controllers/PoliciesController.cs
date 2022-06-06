@@ -59,15 +59,13 @@
                 Log.Information($"Your policy has been created.");
 
                 var service = new ManagePolicyService(_settings.ConnectionStrings);
-                await service.SavePolicyAsync(dataRaw, model, data);
+                await service.SavePolicyAsync(model, policyId: data);
                 return data;
             }
             catch (Exception ex)
             {
                 Log.Error($"Create new policy has error {ex.Message}", ex);
+                throw new Exception($"Your policy has error when created. Please try again later.");
             }
-
-            return "";
         }
-
     }
