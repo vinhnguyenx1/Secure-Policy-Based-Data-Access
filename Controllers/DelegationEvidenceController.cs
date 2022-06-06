@@ -52,7 +52,7 @@
             }
 
             return showToken ? "Not Found" : "Deny";
-        }        
+        }
 
         private string GetDelegationToken(Poort8DelegationModel dataJson, bool showToken)
         {
