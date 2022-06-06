@@ -1,4 +1,4 @@
-    [Route("api/[controller]")]
+[Route("api/[controller]")]
     [ApiController]
     public class AccessTokensController : ControllerBase
     {
@@ -41,4 +41,4 @@
                 throw new Exception($"Error {ex.Message}");
             }
         }
-     }
+    }
